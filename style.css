@@ -1,0 +1,502 @@
+/* Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Colors */
+
+:root {
+    --primary-color: #F97316;
+    --secondary-color: #1E3A5F;
+
+    --bg-color: #FFF7ED;
+    --white: #FFFFFF;
+    --dark-bg: #172033;
+
+    --text-color: #172033;
+    --text-light: #FFFFFF;
+    --text-muted: #64748B;
+
+    --primary-hover: #EA580C;
+    --secondary-hover: #16324F;
+
+    --border-color: #E2E8F0;
+    --input-bg: #FFFFFF;
+    --input-border: #CBD5E1;
+    --input-focus: #F97316;
+
+    --section-light: #FFFFFF;
+    --section-cream: #FFF7ED;
+    --section-dark: #1E3A5F;
+
+    --shadow: rgba(23, 32, 51, 0.12);
+}
+
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Utility */
+
+.container {
+    margin: 0 3rem;
+}
+
+span {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 2px;
+    color: var(--primary-color);
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+span::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 25px;
+    height: 2px;
+    margin-left: 3px;
+    background: var(--primary-color);
+}
+
+#home span,
+#sign-in span {
+    font-size: 14px;
+}
+
+#sign-in span {
+    margin-bottom: 10px;
+}
+
+/* Header */
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2rem;
+}
+
+#navbar .logo {
+    width: 250px;
+}
+
+#navbar nav ul {
+    display: flex;
+}
+
+#navbar nav ul li a {
+    margin: 0 30px;
+    color: var(--text-color);
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+#navbar nav ul li a:hover {
+    color: var(--primary-hover);
+}
+
+/* Home */
+
+#home {
+    background: var(--section-cream);
+}
+
+#home .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 7rem 0;
+}
+
+#home .row .col h1 {
+    color: var(--secondary-color);
+    font-size: 33px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+#home .row .col p {
+    max-width: 400px;
+    margin: 20px 0 30px;
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+#home .row .col input {
+    width: 280px;
+    margin-right: 10px;
+    padding: 10px 15px;
+    border: none;
+}
+
+#home .row .col .btn {
+    width: 130px;
+    padding: 10px 0;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#home .row .col .btn:hover,
+#sign-in .row .col-2 .btn:hover {
+    background-color: var(--primary-hover);
+}
+
+#home .row img,
+#team .row img {
+    max-width: 100%;
+}
+
+/* Team */
+
+#team {
+    background: #fff;
+}
+
+#team .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 3rem 0;
+}
+
+#team .row .col h2 {
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+    font-size: 27px;
+    font-weight: bold;
+}
+
+#team .row .col > p {
+    margin: 20px 0;
+    padding-right: 3rem;
+    color: var(--text-color);
+    font-size: 13px;
+}
+
+#team .row .col a {
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+}
+
+#team .row .col i {
+    margin-left: 10px;
+}
+
+#team .row .col .box {
+    width: 350px;
+    margin-top: 2rem;
+    padding: 20px;
+    background: var(--section-cream);
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+#team .row .col .box p {
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+#team .row .col .box .icon {
+    width: 40px;
+}
+
+#team .row .col .box .avatar {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+#team .row .col .box .avatar h3 {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+#team .row .col .box .avatar p {
+    margin: 0;
+    font-size: 10px;
+}
+
+#team .row .col .box .avatar img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+
+/* Sign In */
+
+#sign-in {
+    background: var(--section-cream);
+}
+
+#sign-in .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    padding: 4.5rem 0;
+}
+
+#sign-in .row .col-1 h2 {
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#sign-in .row .col-1 p {
+    margin-right: 1.5rem;
+    color: var(--text-color);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+#sign-in .row .col-2 {
+    margin-top: 20px;
+}
+
+#sign-in .row .col-2 input {
+    display: block;
+    width: 90%;
+    margin-bottom: 25px;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#sign-in .row .col-2 .btn {
+    display: block;
+    width: 90%;
+    padding: 15px;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* Footer */
+
+#footer {
+    padding: 3rem 0;
+    background-color: var(--section-dark);
+    color: white;
+}
+
+#footer .row {
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+}
+
+#footer img {
+    width: 40px;
+}
+
+#footer .logo-footer {
+    width: 220px;
+    margin-bottom: 1rem;
+}
+
+#footer .row .col-1 .col-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#footer .row .col-1 .col-info img {
+    margin-right: 10px;
+}
+
+#footer .row li {
+    margin-bottom: 15px;
+}
+
+#footer .row a {
+    color: white;
+}
+
+#footer .row .col-4 i {
+    width: 35px;
+    height: 35px;
+    margin: 0 10px;
+    color: var(--primary-color);
+    border: 1px solid white;
+    border-radius: 50%;
+    line-height: 2;
+    text-align: center;
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .container {
+        margin: 0 1rem;
+    }
+
+    #navbar {
+        padding-top: 1.5rem;
+    }
+
+    #navbar .logo {
+        width: 100px;
+    }
+
+    #navbar nav ul li a {
+        margin: 0 8px;
+        font-size: 14px;
+    }
+
+    span {
+        display: block;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    span::after {
+        display: none;
+    }
+
+    #home .row,
+    #team .row {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #home .row,
+    #team .row,
+    #sign-in .row {
+        grid-template-columns: 1fr;
+    }
+
+    #home .row {
+        gap: 1rem;
+        padding: 3rem 0;
+    }
+
+    #home .row .col,
+    #team .row .col,
+    #sign-in .row .col-1 {
+        text-align: center;
+    }
+
+    #home .row .col h1 {
+        margin-top: 2rem;
+        font-size: 28px;
+    }
+
+    #home .row .col p {
+        margin: 20px auto 30px;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    #home .row .col input {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #team .row .col h2 {
+        margin: 1rem 0 10px;
+        font-size: 20px;
+    }
+
+    #team .row .col > p {
+        margin: 20px auto;
+        padding-right: 0;
+        font-size: 7px;
+        text-align: center;
+    }
+
+    #team .row .col .box {
+        width: 300px;
+        margin: 40px auto 20px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    #sign-in .row {
+        gap: 0;
+        padding: 2.5rem 0;
+    }
+
+    #sign-in .row .col-1 h2 {
+        margin-bottom: 10px;
+        font-size: 27px;
+    }
+
+    #sign-in .row .col-1 p {
+        margin-right: 0;
+        font-size: 8px;
+        text-align: center;
+    }
+
+    #sign-in .row .col-2 {
+        margin-top: 0;
+    }
+
+    #sign-in .row .col-2 input {
+        width: 90%;
+        margin: 20px auto 0;
+        padding: 10px;
+    }
+
+    #sign-in .row .col-2 .btn {
+        width: 75%;
+        margin: 20px auto 0;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    #footer .row {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+    }
+
+    #footer .row .col-4 {
+        margin: auto;
+    }
+}
